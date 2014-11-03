@@ -1,0 +1,39 @@
+=simple_form_for :pin do |f|
+  %br/
+  .row.hide
+    .small-10.medium-8.small-centered.columns
+      =f.input :number, input_html: {maxlength: 10}
+  .row
+    .small-9.medium-6.large-3.small-offset-2.medium-offset-3.large-offset-4.columns
+      .panel
+        %h3.text-center#display
+          %em
+            ready
+  .row
+    .small-3.medium-2.large-1.small-offset-2.medium-offset-3.large-offset-4.columns
+      .button.expand.radius#one 1
+    .small-3.medium-2.large-1.columns
+      .button.expand.radius#two 2
+    .small-3.medium-2.large-1.columns.end
+      .button.expand.radius#three 3
+  .row
+    .small-3.medium-2.large-1.small-offset-2.medium-offset-3.large-offset-4.columns
+      .button.expand.radius#four 4
+    .small-3.medium-2.large-1.columns
+      .button.expand.radius#five 5
+    .small-3.medium-2.large-1.columns.end
+      .button.expand.radius#six 6
+  .row
+    .small-3.medium-2.large-1.small-offset-2.medium-offset-3.large-offset-4.columns
+      .button.expand.radius#seven 7
+    .small-3.medium-2.large-1.columns
+      .button.expand.radius#eight 8
+    .small-3.medium-2.large-1.columns.end
+      .button.expand.radius#nine 9
+  .row
+    .small-3.medium-2.large-1.small-offset-2.medium-offset-3.large-offset-4.columns
+      .button.expand.radius#star *
+    .small-3.medium-2.large-1.columns
+      .button.expand.radius#zero 0
+    .small-3.medium-2.large-1.columns.end
+      .button.expand.radius#pound #
