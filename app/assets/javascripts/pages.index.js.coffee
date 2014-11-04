@@ -26,61 +26,61 @@ jQuery ->
 
   buttonZero.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(0)
     buttonHandler()
 
   buttonOne.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(1)
     buttonHandler()
 
   buttonTwo.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(2)
     buttonHandler()
 
   buttonThree.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(3)
     buttonHandler()
 
   buttonFour.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(4)
     buttonHandler()
 
   buttonFive.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(5)
     buttonHandler()
 
   buttonSix.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(6)
     buttonHandler()
 
   buttonSeven.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(7)
     buttonHandler()
 
   buttonEight.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(8)
     buttonHandler()
 
   buttonNine.click (e) ->
     e.preventDefault()
-    unless key.length > 9
+    unless key.length > 11
       key = key.concat(9)
     buttonHandler()
 
