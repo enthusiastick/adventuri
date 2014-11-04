@@ -12,6 +12,7 @@ class PagesController < ApplicationController
   end
 
   def index
+    @attempt = Attempt.new
   end
 
   def posts

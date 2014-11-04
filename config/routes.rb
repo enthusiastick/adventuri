@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'pages#index'
-  post '/', to: 'pages#access'
+  resources :attempts, only: :create
   get 'posts', to: 'pages#posts'
 end

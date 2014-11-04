@@ -1,8 +1,8 @@
 jQuery ->
   display = $("#display")
-  form = $(".simple_form.pin")
+  form = $("#new_attempt")
   key = ''
-  pinInput = $("input[id='pin_number']")
+  pinInput = $("input[id='attempt_number']")
   buttonZero = $("#zero")
   buttonOne = $("#one")
   buttonTwo = $("#two")
