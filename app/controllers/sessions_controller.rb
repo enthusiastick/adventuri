@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def create
-    if request.env['omniauth.auth']['uid'] == '2845307227'
+    if request.env['omniauth.auth']['uid'] == ENV['TWITTER_UID']
       session[:access] = true
       session[:poster] = true
       redirect_to new_post_path
