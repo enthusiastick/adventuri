@@ -10,5 +10,9 @@
     %h1 #{@post.title}
     %p
       %em Posted by aventuri on #{@post.created_at.to_formatted_s(:short)}
+      -if session[:poster]
+        =link_to post_path(@post) do
+          &nbsp;
+          %i.fi-pencil
     %div
       =raw RedCloth.new(@post.body).to_html

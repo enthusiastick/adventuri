@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :verify, only: [:create, :new]
+  before_action :verify, only: [:create, :new, :show, :update]
 
   def create
     @post = Post.new(post_params)
@@ -20,6 +20,21 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+  end
+
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:success] = 'Updated'
+      redirect_to posts_path
+    else
+      flash[:alert] = 'Error.'
+      render :show
+    end
   end
 
   protected
