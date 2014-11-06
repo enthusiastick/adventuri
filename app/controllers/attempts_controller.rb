@@ -6,10 +6,12 @@ def create
   @attempt.save!
   if @attempt.number == ENV['ACCESS_PIN']
     session[:access] = true
+    session[:remaining] = 5
     flash[:success] = 'Access Granted.'
     redirect_to posts_path
   else
-    flash[:alert] = 'Access Denied.'
+    flash[:alert] = "Access Denied. #{ActionController::Base.helpers.pluralize((session[:remaining] - 1), 'attempt')} remaining."
+    session[:remaining] -= 1
     redirect_to root_path
   end
 end

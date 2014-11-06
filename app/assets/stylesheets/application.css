@@ -15,3 +15,7 @@
  *= require foundation_and_overrides
 
  */
+
+.serif {
+  font-family: "Cinzel Decorative", Georgia, Cambria, serif;
+}
