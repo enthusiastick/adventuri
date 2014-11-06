@@ -1,7 +1,8 @@
 %br/
 .row
   .small-10.small-centered.columns
-    %h1
-      =@post.title
+    %h1 #{@post.title}
+    %p
+      %em Posted by aventuri on #{@post.created_at.to_formatted_s(:short)}
     %div
-      =@post.body
+      =raw RedCloth.new(@post.body).to_html

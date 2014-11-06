@@ -30,6 +30,7 @@ gem 'google-webfonts'
 gem 'haml'
 gem 'mail_validation'
 gem 'redcloth-rails'
+gem 'RedCloth'
 gem 'simple_form'
 gem 'unicorn'
 

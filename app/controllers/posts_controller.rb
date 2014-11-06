@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def index
+    redirect_to root_path unless session[:access]
     @post = Post.last
   end
 
