@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    RedCloth (4.2.9)
     actionmailer (4.1.7)
       actionpack (= 4.1.7)
       actionview (= 4.1.7)
@@ -159,6 +160,9 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    redcloth-rails (0.2.0)
+      RedCloth (>= 4.2.0)
+      rails (>= 3.1.0)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -263,6 +267,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.1.7)
   rails_12factor
+  redcloth-rails
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

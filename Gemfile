@@ -29,6 +29,7 @@ gem 'foundation-icons-sass-rails'
 gem 'google-webfonts'
 gem 'haml'
 gem 'mail_validation'
+gem 'redcloth-rails'
 gem 'simple_form'
 gem 'unicorn'
 
