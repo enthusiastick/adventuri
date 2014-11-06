@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_action :verify, only: [:create, :new]
+
   def create
     @post = Post.new(post_params)
     if @post.save
@@ -24,6 +26,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:body, :title)
+  end
+
+  def verify
+    redirect_to root_path unless session[:poster]
   end
 
 end
