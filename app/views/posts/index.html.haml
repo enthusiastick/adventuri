@@ -5,14 +5,18 @@
     %p.text-center.serif
       %em I should really have a better tagline.
   %hr/
-.row
-  .small-10.small-centered.columns
-    %h1 #{@post.title}
-    %p
-      %em Posted by aventuri on #{@post.created_at.to_formatted_s(:short)}
-      -if session[:poster]
-        =link_to post_path(@post) do
-          &nbsp;
-          %i.fi-pencil
-    %div
-      =raw RedCloth.new(@post.body).to_html
+-@posts.each do |post|
+  .row
+    .small-10.small-centered.columns
+      .panel
+        %h1 #{post.title}
+        %p
+          %em Posted by Adam on #{post.created_at.to_formatted_s(:short)}
+          -if session[:poster]
+            =link_to post_path(post) do
+              &nbsp;
+              %i.fi-pencil
+      %div
+        =raw RedCloth.new(post.body).to_html
+    %br/
+    %hr/
