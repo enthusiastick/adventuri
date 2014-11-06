@@ -1,0 +1,14 @@
+%br/
+.row
+  .small-12.columns
+    %table{style: 'margin: auto;'}
+      %tr
+        %th Attempt
+        %th IP Address
+        %th Date/Time
+      -@attempts.each do |attempt|
+        %tr
+          %td #{attempt.number}
+          %td #{attempt.ip}
+          %td #{attempt.created_at.to_formatted_s(:short)}
+%br/

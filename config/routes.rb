@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#index'
-  resources :attempts, only: :create
+  resources :attempts, only: [:create, :index]
   resources :posts, only: [:create, :new, :index]
 
   get '/auth/:provider/callback', to: 'sessions#create'
