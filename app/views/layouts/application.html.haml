@@ -16,8 +16,8 @@
         .small-12.columns
           -flash.each do |name, msg|
             -if msg.is_a?(String)
-              .alert-box{:class => name, style: 'font-size: large;'}
+              .alert-box{:class => name, "data-alert" => "", style: 'font-size: large;'}
                 =content_tag :div, msg
-                %a.close{:href => "#"} ×
+                %a.close{:href => "#"} &times;
     =yield
     =javascript_include_tag "application"
