@@ -9,13 +9,13 @@
   .row
     .small-10.small-centered.columns
       .panel
-        %h1 #{post.title}
-        %p
+        %p.text-right
           %em Posted by Adam on #{post.created_at.to_formatted_s(:short)}
           -if session[:poster]
             =link_to post_path(post) do
               &nbsp;
               %i.fi-pencil
+        %h1 #{post.title}
       %div
         =raw RedCloth.new(post.body).to_html
     %br/
