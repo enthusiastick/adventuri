@@ -19,6 +19,18 @@
               .alert-box{:class => name, "data-alert" => "", style: 'font-size: large;'}
                 =content_tag :div, msg
                 %a.close{:href => "#"} &times;
-    =yield
+    -if session[:poster]
+      .icon-bar.large-vertical.four-up.left
+        =link_to posts_path, class: 'item' do
+          %i.fi-home
+        =link_to attempts_path, class: 'item' do
+          %i.fi-list-thumbnails
+        =link_to new_post_path, class: 'item' do
+          %i.fi-pencil
+        =link_to signout_path, class: 'item' do
+          %i.fi-x
+      =yield
+    -else
+      =yield
     =javascript_include_tag "application"
     =yield :javascript
