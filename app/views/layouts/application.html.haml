@@ -24,15 +24,20 @@
         .small-11.columns
           =yield
         .small-1.column
+          %br/
           .icon-bar.large-vertical.four-up
             =link_to posts_path, class: 'item' do
               %i.fi-home
+                .medium /posts
             =link_to attempts_path, class: 'item' do
               %i.fi-list-thumbnails
+                .medium /attempts
             =link_to new_post_path, class: 'item' do
               %i.fi-pencil
+                .medium /posts/new
             =link_to signout_path, class: 'item' do
               %i.fi-x
+                .medium /signout
     -else
       =yield
     =javascript_include_tag "application"
