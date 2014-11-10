@@ -20,16 +20,19 @@
                 =content_tag :div, msg
                 %a.close{:href => "#"} &times;
     -if session[:poster]
-      .icon-bar.large-vertical.four-up.left
-        =link_to posts_path, class: 'item' do
-          %i.fi-home
-        =link_to attempts_path, class: 'item' do
-          %i.fi-list-thumbnails
-        =link_to new_post_path, class: 'item' do
-          %i.fi-pencil
-        =link_to signout_path, class: 'item' do
-          %i.fi-x
-      =yield
+      .row
+        .small-11.columns
+          =yield
+        .small-1.column
+          .icon-bar.large-vertical.four-up
+            =link_to posts_path, class: 'item' do
+              %i.fi-home
+            =link_to attempts_path, class: 'item' do
+              %i.fi-list-thumbnails
+            =link_to new_post_path, class: 'item' do
+              %i.fi-pencil
+            =link_to signout_path, class: 'item' do
+              %i.fi-x
     -else
       =yield
     =javascript_include_tag "application"
