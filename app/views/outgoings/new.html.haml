@@ -1,0 +1,10 @@
+%br/
+.row
+  .small-10.small-centered.columns
+    =simple_form_for @outgoing do |f|
+      =f.input :name
+      =f.input :email
+      =f.input :subject
+      =f.input :body, input_html: {style: 'height: 25em;'}
+      %p.text-right
+        =f.button :submit

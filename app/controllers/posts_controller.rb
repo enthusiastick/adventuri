@@ -43,8 +43,4 @@ class PostsController < ApplicationController
     params.require(:post).permit(:body, :title)
   end
 
-  def verify
-    redirect_to root_path unless session[:poster]
-  end
-
 end
