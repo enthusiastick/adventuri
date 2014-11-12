@@ -1,5 +1,5 @@
 class OutgoingMailer < ActionMailer::Base
-  default from: 'adam@venturicreative.com'
+  default from: 'Adam Venturi <adam@venturicreative.com>'
 
   def send_out(outgoing)
     @outgoing = outgoing
