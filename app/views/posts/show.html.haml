@@ -2,7 +2,11 @@
 .row
   .small-10.small-centered.columns
     =simple_form_for @post do |f|
-      =f.input :title
+      .row
+        .small-10.columns
+          =f.input :title
+        .small-2.columns
+          =f.input :active
       =f.textile_editor :body, style: 'height: 25em;'
       %p.text-right
         =f.button :submit
