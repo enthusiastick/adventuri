@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
   def index
     redirect_to root_path unless session[:access]
-    @posts = Post.order(:created_at).reverse_order.limit(10)
+    @posts = Post.where(active: true).order(:created_at).reverse_order.limit(10)
   end
 
   def new
